@@ -158,7 +158,7 @@ export default function Card() {
       : items.filter((item) => item.category === selectedCategory);
 
   return (
-    <div>
+    <div className="mt-4">
       <div className="flex justify-center mb-4">
         <button
           className={`mr-2 ${

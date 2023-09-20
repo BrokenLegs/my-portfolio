@@ -37,20 +37,22 @@ export default function NavBar() {
   const navBarStyling = whichNavBarStyling();
 
   // This function is used to determine the styling of the navBar
+  const ulStyling =
+    "flex flex-row flex-wrap gap-4 p-10 w-screen z-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]  ";
+
   function whichNavBarStyling() {
-    let navBarStyling =
-      "flex flex-row flex-wrap gap-4 p-10 w-screen z-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]  ";
+    let navBarStyling = "sticky top-0 ";
     if (scrollOnTop && scrollDirection === "up") {
       navBarStyling +=
-        " transition-all duration-1000 opacity-100 absolute transparent text-white  ";
+        "transition-all duration-1000 opacity-100 transparent text-white  ";
     }
     if (scrollDirection === "up" && !scrollOnTop) {
       navBarStyling +=
-        " fixed top-0 transition-opacity duration-1000 ease-in-out opacity-100 bg-white text-black";
+        "transition-all duration-1000 ease-in-out opacity-100 bg-white text-black";
     }
     if (scrollDirection === "down") {
       navBarStyling +=
-        " fixed top-0 transition-opacity duration-1000 ease-in-out opacity-0 text-white";
+        "transition-all duration-1000 ease-in-out opacity-0 text-white z-1";
     }
 
     return navBarStyling;
@@ -58,8 +60,8 @@ export default function NavBar() {
 
   return (
     <>
-      <nav>
-        <ul className={navBarStyling}>
+      <nav className={navBarStyling}>
+        <ul className={ulStyling}>
           <li>
             <Link href="/">
               <svg

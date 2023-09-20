@@ -8,11 +8,17 @@ import Image from "next/image";
 export default function index() {
   return (
     <>
-      <Layout>
-        <div className="h-screen">
-          <img src="/1.jpg" alt="background" style={{ objectFit: "cover" }} />
-        </div>
-      </Layout>
+      <div className="h-screen relative" style={{ height: "200vh" }}>
+        <Layout>
+          <Image
+            src="/1.jpg"
+            alt="background"
+            layout="fill"
+            objectFit="cover"
+            className="fixed z-[-1]"
+          />
+        </Layout>
+      </div>
     </>
   );
 }
