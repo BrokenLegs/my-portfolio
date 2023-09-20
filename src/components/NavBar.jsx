@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useTransition } from "react";
 
 export default function NavBar() {
   // When the user scrolls down the navBar gets hidden
@@ -75,6 +75,7 @@ export default function NavBar() {
                   fill={
                     scrollDirection === "up" && !scrollOnTop ? "black" : "white"
                   }
+                  className="transition-all duration-1000 ease-in-out"
                 ></path>
               </svg>
             </Link>
