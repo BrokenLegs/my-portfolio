@@ -19,8 +19,7 @@ export default function Card() {
         "The Adidas Superstar is a classic sneaker that has been popular for decades.",
       price: 100,
       inStock: false,
-      image:
-        "https://assets.adidas.com/images/w_766,h_766,f_auto,q_auto,fl_lossy,c_fill,g_auto/7405c7a6fd79457797ffcbd2ebabb35a_9366/superstar-xlg-skor.jpg",
+      image: "https://via.placeholder.com/150",
       category: "sneakers",
     },
     {
@@ -74,8 +73,7 @@ export default function Card() {
         "The Fila Disruptor is a classic sneaker that has been popular for decades.",
       price: 110,
       inStock: false,
-      image:
-        "https://i8.amplience.net/t/jpl/jdse_product_list?plu=jd_557566_bl&qlt=85&exclusive=1&qlt=92&wid=363&hei=363&v=1&fmt=auto",
+      image: "https://via.placeholder.com/150",
       category: "sneakers",
     },
     {

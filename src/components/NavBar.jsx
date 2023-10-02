@@ -36,12 +36,12 @@ export default function NavBar() {
   }
   const navBarStyling = whichNavBarStyling();
 
-  // This function is used to determine the styling of the navBar
   const ulStyling =
-    "flex flex-row flex-wrap gap-4 p-10 w-screen z-10 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]  ";
+    "flex flex-row flex-wrap gap-4 p-10 w-full drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]  ";
 
+  // This function is used to determine the styling of the navBar
   function whichNavBarStyling() {
-    let navBarStyling = "sticky top-0 ";
+    let navBarStyling = "sticky top-0 z-10 relative sm:display-none";
     if (scrollOnTop && scrollDirection === "up") {
       navBarStyling +=
         "transition-all duration-1000 opacity-100 transparent text-white  ";
