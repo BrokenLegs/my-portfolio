@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useRef, useState, useTransition } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function NavBar() {
   // When the user scrolls down the navBar gets hidden
@@ -9,6 +10,8 @@ export default function NavBar() {
   const [scrollOnTop, setScrollOnTop] = useState(true);
   const [scrollDirection, setScrollDirection] = useState("up");
   const [scrollPosition, setScrollPosition] = useState(0);
+
+  const { t } = useTranslation();
 
   // This useEffect is used to add and remove the event listener for the scroll
   useEffect(() => {
@@ -83,12 +86,12 @@ export default function NavBar() {
             </Link>
           </li>
           <li className="text-2xl">
-            <Link href="items">Items</Link>
+            <Link href="projects">{t("navProjects")}</Link>
           </li>
           <li className="text-2xl">
             <Link href="about">About</Link>
           </li>
-          <h2 className="text-6xl ml-auto font-bold ">My Portfolio</h2>
+          <h2 className="text-6xl ml-auto font-bold ">{t("myPortfolio")}</h2>
         </ul>
       </nav>
     </>

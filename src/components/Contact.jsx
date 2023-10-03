@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Contact({ inputStyle, hrLineColor }) {
+  const { t } = useTranslation();
+
   return (
     <form className="flex flex-col gap-10 ">
       <input
         type="text"
         name="name"
         id="name"
-        placeholder="Enter your name"
+        placeholder={t("namePlaceholder")}
         className={inputStyle}
       />
       <hr className={hrLineColor} />
@@ -15,7 +18,7 @@ export default function Contact({ inputStyle, hrLineColor }) {
         type="email"
         name="email"
         id="email"
-        placeholder="Your Email address"
+        placeholder={t("emailPlaceholder")}
         className={inputStyle}
       />
       <hr className={hrLineColor} />
@@ -23,11 +26,11 @@ export default function Contact({ inputStyle, hrLineColor }) {
       <textarea
         name="message"
         id="message"
-        placeholder="Write me a message"
+        placeholder={t("messagePlaceholder")}
         className={inputStyle}
       ></textarea>
       <hr className={hrLineColor} />
-      <button type="submit">Send</button>
+      <button type="submit">{t("sendButton")}</button>
     </form>
   );
 }

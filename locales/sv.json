@@ -1,0 +1,29 @@
+{
+  "navProjects": "Projekt",
+  "navAbout": "Om mig",
+  "myPortfolio": "Min portfolio",
+
+  "introduction": "Carl här, webbutvecklare",
+  "myStatement": "Att hjälpa folk omvandla sina digitala visioner till konkreta webblösningar är mitt yrkeskall",
+
+  "about": "Om mig",
+  "aboutText": "Jag är en 35-årig webbutvecklare från Göteborg. Älskar programmering och att lösa problem. Val av utvecklingsverktyg i dagens läge är Visual Studio Code, Next.js, React, Tailwind, Node, Git.",
+  "aboutLink": "Läs mer om mig här",
+
+  "project": "Aktuellt projekt",
+  "projectText": "Min gode vän Lasse är en utomordentligt duktig designer, artist, konstnär. Han förtjänar att ha en plats på webben där folk kan se/köpa hans konst. Nu är sidan äntligen på gång",
+  "projectLink": "Läs mer om projektet här",
+
+  "socialMedia": "Sociala medier",
+
+  "workTogether": "Låt oss jobba ihop",
+  "contactMe": "Kontakta mig här!",
+  "contactText": "Har du en idé eller ett projekt du vill förverkliga?\nSkicka ett meddelande så hör jag av mig så snart jag kan.",
+  "namePlaceholder": "Ditt namn",
+  "emailPlaceholder": "Din Email",
+  "messagePlaceholder": "Skriv ett meddelande...",
+  "sendButton": "Skicka",
+  "sending": "Skickar...",
+  "success": "Tack för ditt meddelande!",
+  "error": "Något gick fel. Försök igen senare."
+}
