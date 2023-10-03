@@ -22,7 +22,7 @@ export default function Index() {
           }}
         >
           <div
-            className="w-11/12 mx-auto min-h-screen text-balance"
+            className="w-11/12 mx-auto min-h-screen text-balance whitespace-pre-wrap"
             style={{
               background: "#1b1e23",
               backgroundImage: "url('/me.png')",
@@ -79,7 +79,7 @@ export default function Index() {
                     </div>
                     <hr className="border-gray-400 w-full mt-10" />
                     <div className="mr-auto">
-                      <h2 className="text-3xl text-white">
+                      <h2 className="text-3xl text-white mt-5">
                         {t("socialMedia")}
                       </h2>
                       <MySocialMedia />

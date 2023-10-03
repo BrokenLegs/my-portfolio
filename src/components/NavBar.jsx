@@ -3,6 +3,18 @@ import React, { useEffect, useRef, useState, useTransition } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function NavBar() {
+  const { t, i18n } = useTranslation();
+  const handleLanguageChange = (lang) => i18n.changeLanguage(lang);
+  const selectLanguage = () => {
+    return (
+      <>
+        <button onClick={() => handleLanguageChange("en")}>Eng</button>
+        <button className="ml-2" onClick={() => handleLanguageChange("sv")}>
+          Swe
+        </button>
+      </>
+    );
+  };
   // When the user scrolls down the navBar gets hidden
   // When the user scrolls up the navBar gets shown but with a white background and black text
   // If the scroll direction is up and page is in the top the background get transparent
@@ -10,8 +22,6 @@ export default function NavBar() {
   const [scrollOnTop, setScrollOnTop] = useState(true);
   const [scrollDirection, setScrollDirection] = useState("up");
   const [scrollPosition, setScrollPosition] = useState(0);
-
-  const { t } = useTranslation();
 
   // This useEffect is used to add and remove the event listener for the scroll
   useEffect(() => {
@@ -91,6 +101,7 @@ export default function NavBar() {
           <li className="text-2xl">
             <Link href="about">About</Link>
           </li>
+          <li className="align-top"> {selectLanguage()}</li>
           <h2 className="text-6xl ml-auto font-bold ">{t("myPortfolio")}</h2>
         </ul>
       </nav>

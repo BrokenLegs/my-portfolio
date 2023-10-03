@@ -1,6 +1,29 @@
 {
+  "navProjects": "Projects",
+  "navAbout": "About",
+  "myPortfolio": "My portfolio",
+
+  "introduction": "I'm Carl,\nweb developer",
+  "myStatement": "Helping people transform their digital visions into concrete web solutions is my professional calling",
+
+  "about": "About me",
+  "aboutText": "I'm a 35 year old web developer from Gothenburg, Sweden. I love programming and solving problems. My current development stack is Visual Studio Code, Next.js, React, Tailwind, Node, Git.",
+  "aboutLink": "Read more about me here",
+
+  "project": "Current project",
+  "projectText": "My good friend Lasse is an extremely talented designer, artist, painter. He deserves to have a place on the web where people can see/buy his art. Now the site is finally on its way",
+  "projectLink": "See the project here",
+
+  "socialMedia": "Social media",
+
+  "workTogether": "Let's work together!",
+  "contactMe": "Contact me here!",
+  "contactText": "Do you have an idea or a project you want to realize?\nSend me a message and I'll get back to you as soon as I can.",
   "namePlaceholder": "Your name",
   "emailPlaceholder": "Your email",
-  "messagePlaceholder": "Write a message",
-  "sendButton": "Send"
+  "messagePlaceholder": "Your message...",
+  "sendButton": "Send",
+  "sending": "Sending...",
+  "success": "Thank you for your message!",
+  "error": "Something went wrong, please try again later."
 }
