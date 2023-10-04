@@ -34,9 +34,9 @@ export default function Index() {
           >
             <Layout>
               <div className=" min-h-screen">
-                <div className="flex px-10 justify-between mt-20 font-bold">
-                  <div className="w-5/12">
-                    <h1 className=" text-6xl text-white  ">
+                <div className="flex flex-wrap px-10 justify-between mt-20 font-bold">
+                  <div className="w-5/12 xs:w-full">
+                    <h1 className=" text-6xl  text-white  ">
                       {t("introduction")}
                     </h1>
                     <p className=" text-gray-400 mt-5 drop-shadow-[0_1px_0.01px_rgba(0,0,0,1)] text-lg ">
@@ -54,12 +54,12 @@ export default function Index() {
                           alt="Arrow"
                           width={100}
                           height={100}
-                          className="animate-bounce"
+                          className="animate-bounce xs:hidden"
                         />
                       </Link>
                     </div>
                   </div>
-                  <div className="flex flex-wrap w-4/12 z-1 ">
+                  <div className="flex flex-wrap w-4/12 z-1 xs:w-full">
                     <div>
                       <h2 className="text-3xl text-white"> {t("about")}</h2>
                       <p className="text-gray-400 my-5">{t("aboutText")}</p>
@@ -78,8 +78,8 @@ export default function Index() {
                       </a>
                     </div>
                     <hr className="border-gray-400 w-full mt-10" />
-                    <div className="mr-auto">
-                      <h2 className="text-3xl text-white mt-5">
+                    <div className="mr-auto mb-5 xs:hidden">
+                      <h2 className="text-3xl text-white mt-5 xs:basis-full xs:text-center">
                         {t("socialMedia")}
                       </h2>
                       <MySocialMedia />
@@ -89,17 +89,35 @@ export default function Index() {
               </div>
               <hr className="border-gray-400 w-full" id="work-with-me" />
               <div
-                className="work-with-me text-white flex flex-wrap pt-40 ml-20 min-h-screen"
+                className="work-with-me text-white flex flex-wrap pt-40 ml-20 min-h-screen xs:pt-10 xs:m-0 xs:justify-center"
                 style={{ backgroundColor: "#1b1e23" }}
               >
-                <div className="get-in-touch  flex-wrap whitespace-pre">
-                  <h2 className="text-7xl ">{t("workTogether")}</h2>
-                  <h3 className="text-4xl mt-10 ">{t("contactMe")}</h3>
+                <div className="get-in-touch flex-wrap whitespace-pre xs:text-center xs:justify-center xs:mb-5">
+                  {/* <h2 className="text-7xl xs:text-3xl xs:hidden">
+                    {t("workTogether")}
+                  </h2> */}
+                  <h3 className="text-6xl pb-3 mt-10 xs:mt-0">
+                    {t("contactMe")}
+                  </h3>
                   <p className="text-gray-400 ">{t("contactText")}</p>
-                  <MySocialMedia />
+                  <div className=" xs:m-0 xs:justify-center xs:flex">
+                    <MySocialMedia />
+                  </div>
                 </div>
-                <div className="contact-form-div w-5/12 ml-auto mr-20   ">
-                  <div className="rounded-lg bg-gray-800 p-20">
+                <div className="contact-form-div w-5/12 ml-auto mr-20 xs:w-full xs:m-0 relative">
+                  <div className="under-construction bg-opacity-50 bg-black absolute z-10 inset-0 flex justify-center items-center">
+                    <div className="text-white text-center">
+                      <h2 className="text-4xl font-bold mb-4">
+                        Under Construction
+                      </h2>
+                      <p className="text-lg">
+                        {
+                          "We're sorry, this feature is currently under construction."
+                        }
+                      </p>
+                    </div>
+                  </div>
+                  <div className="rounded-lg bg-gray-800 p-20 relative z-0">
                     <Contact
                       inputStyle="px-6 bg-transparent text-white text-2xl placeholder-white"
                       hrLineColor="border-gray-400"
