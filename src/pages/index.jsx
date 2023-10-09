@@ -1,5 +1,6 @@
+"use client"; // This is a client component 👈🏽
 import "tailwindcss/tailwind.css";
-import React from "react";
+import React, { useState } from "react";
 import Layout from "@/components/Layout";
 import MySocialMedia from "@/components/MySocialMedia";
 import Contact from "@/components/Contact";
@@ -9,8 +10,10 @@ import { Link } from "react-scroll";
 import { I18nextProvider } from "react-i18next";
 import i18n from "../../i18n";
 import { useTranslation } from "react-i18next";
+import Skills from "@/components/Skills";
 
 export default function Index() {
+  const [isSkillsDisplaying, setIsSkillsDisplaying] = useState(false);
   const { t } = useTranslation();
   return (
     <>
@@ -22,7 +25,7 @@ export default function Index() {
           }}
         >
           <div
-            className="w-11/12 mx-auto min-h-screen text-balance whitespace-pre-wrap"
+            className="w-11/12 mx-auto min-h-screen  whitespace-pre-wrap"
             style={{
               background: "#1b1e23",
               backgroundImage: "url('/me.png')",
@@ -61,10 +64,25 @@ export default function Index() {
                   </div>
                   <div className="flex flex-wrap w-4/12 z-1 xs:w-full">
                     <div>
-                      <h2 className="text-3xl text-white"> {t("about")}</h2>
+                      <h2 className="text-3xl text-white">{t("about")}</h2>
                       <p className="text-gray-400 my-5">{t("aboutText")}</p>
-                      <a className="underline text-gray-400 " href="#">
+                      <a
+                        className="underline text-gray-400 "
+                        href="#"
+                        onClick={() =>
+                          setIsSkillsDisplaying(!isSkillsDisplaying)
+                        }
+                      >
                         {t("aboutLink")}
+                        <div
+                          className={`inset-0 fixed z-50 transform transition-transform ease-out ${
+                            isSkillsDisplaying
+                              ? "translate-x-0"
+                              : "translate-x-full"
+                          }`}
+                        >
+                          <Skills />
+                        </div>
                       </a>
                     </div>
                     <hr className="border-gray-400 w-full mt-10" />

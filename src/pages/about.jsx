@@ -1,10 +1,14 @@
 import React from "react";
 import Layout from "@/components/Layout";
+import Skills from "@/components/Skills";
+import { I18nextProvider } from "react-i18next";
+import i18n from "../../i18n";
+import { useTranslation } from "react-i18next";
 
 export default function about() {
   return (
     <Layout>
-      <div className="flex flex-wrap justify-center">
+      <div className="flex flex-wrap justify-center ">
         <div className="basis-1/3 mt-20">
           <h1>About</h1>
           <p>

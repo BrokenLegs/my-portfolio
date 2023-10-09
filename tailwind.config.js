@@ -17,7 +17,8 @@ module.exports = {
       },
       animation: {
         'bounce': 'bounce 3s linear infinite',
-      }
+      },
+
 
     },
   },
