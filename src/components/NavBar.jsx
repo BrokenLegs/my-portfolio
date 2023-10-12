@@ -65,7 +65,7 @@ export default function NavBar() {
     }
     if (scrollDirection === "down") {
       navBarStyling +=
-        "transition-all duration-1000 ease-in-out opacity-0 text-white z-1";
+        "transition-all duration-1000 ease-in-out opacity-0 text-white z-[-10]";
     }
 
     return navBarStyling;
