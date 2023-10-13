@@ -40,8 +40,8 @@ export default function Skills() {
 
   return (
     <div className="transition ease-in-out duration-300 w-full h-full flex backdrop-filter backdrop-blur-lg">
-      <div className="bg-gray-800 h-4/6 my-auto">
-        <div className="experience flex flex-wrap gap-4 justify-center">
+      <div className="bg-gray-800 h-4/6 my-auto drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+        <div className="experience flex flex-wrap gap-4 justify-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
           <h1 className="text-center text-3xl basis-full pt-5">Erfarenheter</h1>
           <ul className="basis-full text-center">
             <li>{"Utvecklare (utöver 2st LIA-Perioder). Ca 1 år"}</li>
@@ -55,10 +55,10 @@ export default function Skills() {
             </li>
           </ul>
         </div>
-        <div className="skills-container flex flex-wrap text-white">
+        <div className="skills-container flex flex-wrap drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
           <div className="soft-skills w-1/2 flex ">
             <div className="w-1/2  mx-auto flex-wrap">
-              <h1 className="text-2xl text-center mt-10">Soft Skills</h1>
+              <h1 className="text-2xl text-center mt-10 ">Soft Skills</h1>
               <ul className="flex flex-wrap gap-3 justify-center text-1xl py-10">
                 {softSkills.map((softSkill) => (
                   <li key={softSkill} className="rounded-full p-2">

@@ -10,8 +10,9 @@ import { Link } from "react-scroll";
 import { I18nextProvider } from "react-i18next";
 import i18n from "../../i18n";
 import { useTranslation } from "react-i18next";
-import Skills from "@/components/Skills";
+
 import { ChakraProvider } from "@chakra-ui/react";
+import Skills from "@/components/Skills";
 
 export default function Index() {
   const [isSkillsDisplaying, setIsSkillsDisplaying] = useState(false);
@@ -60,6 +61,7 @@ export default function Index() {
                             width={100}
                             height={100}
                             className="animate-bounce xs:hidden"
+                            loading="lazy"
                           />
                         </Link>
                       </div>
@@ -113,9 +115,6 @@ export default function Index() {
                   style={{ backgroundColor: "#1b1e23" }}
                 >
                   <div className="get-in-touch flex-wrap whitespace-pre xs:text-center xs:justify-center xs:mb-5">
-                    {/* <h2 className="text-7xl xs:text-3xl xs:hidden">
-                    {t("workTogether")}
-                  </h2> */}
                     <h3 className="text-6xl pb-3 mt-10 xs:mt-0">
                       {t("contactMe")}
                     </h3>
@@ -125,18 +124,6 @@ export default function Index() {
                     </div>
                   </div>
                   <div className="contact-form-div w-5/12 ml-auto mr-20 xs:w-full xs:m-0 relative">
-                    {/* <div className="under-construction bg-opacity-50 bg-black absolute z-10 inset-0 flex justify-center items-center">
-                      <div className="text-white text-center">
-                        <h2 className="text-4xl font-bold mb-4">
-                          Under Construction
-                        </h2>
-                        <p className="text-lg">
-                          {
-                            "We're sorry, this feature is currently under construction."
-                          }
-                        </p>
-                      </div>
-                    </div> */}
                     <div className="rounded-lg bg-gray-800 p-20 relative z-0">
                       <Contact
                         inputStyle="placeholder-opacity-15 px-6 bg-transparent text-white text-2xl placeholder-white"
