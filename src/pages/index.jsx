@@ -117,6 +117,15 @@ export default function Index() {
                   <div className="get-in-touch flex-wrap whitespace-pre xs:text-center xs:justify-center xs:mb-5">
                     <h3 className="text-6xl pb-3 mt-10 xs:mt-0">
                       {t("contactMe")}
+                      {"  "}
+                      <Image
+                        src={"/r-arrow.svg"}
+                        alt="Right arrow"
+                        width={65}
+                        height={65}
+                        loading="lazy"
+                        className="inline-block"
+                      />
                     </h3>
                     <p className="text-gray-400 ">{t("contactText")}</p>
                     <div className=" xs:m-0 xs:justify-center xs:flex">
