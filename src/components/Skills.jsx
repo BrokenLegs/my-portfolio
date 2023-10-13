@@ -51,7 +51,9 @@ export default function Skills() {
               }
             </li>
             <li>
-              {"Kampsportsinstruktör i WingTsun, 12år & Weapons Combat ca 5år"}
+              {
+                "Kampsportsinstruktör i WingTsun, 12 år & Weapons Combat ca 5 år"
+              }
             </li>
           </ul>
         </div>

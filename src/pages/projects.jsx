@@ -8,9 +8,17 @@ export default function projects() {
   return (
     <Layout>
       <div className="flex flex-wrap justify-evenly ">
-        <div className="project-container w-300 ">
+        <div className="project-container w-300  text-center">
+          <p>Status: Under utveckling</p>
           <Image src="/lasses-projekt.jpg" alt="me" width={300} height={300} />
           <h2 className="text-center">One Trick Pony</h2>
+        </div>
+
+        <div className="project-container w-300 flex-wrap text-center">
+          <p>Status: Kommande</p>
+          <img src="https://via.placeholder.com/300x225" alt="placeholder" />
+
+          <h2 className="text-center">Laszlos ställning AB</h2>
         </div>
       </div>
     </Layout>

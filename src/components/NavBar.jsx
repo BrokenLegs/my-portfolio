@@ -50,7 +50,7 @@ export default function NavBar() {
   const navBarStyling = whichNavBarStyling();
 
   const ulStyling =
-    "flex flex-row flex-wrap gap-4 p-10 w-full drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]  ";
+    "flex flex-row flex-wrap gap-6 p-10 w-full drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]  ";
 
   // This function is used to determine the styling of the navBar
   function whichNavBarStyling() {
@@ -98,9 +98,9 @@ export default function NavBar() {
           <li className="text-2xl">
             <Link href="projects">{t("navProjects")}</Link>
           </li>
-          <li className="text-2xl">
+          {/* <li className="text-2xl">
             <Link href="about">About</Link>
-          </li>
+          </li> */}
           <li className="align-top"> {selectLanguage()}</li>
           <h2 className="text-6xl ml-auto font-bold ">{t("myPortfolio")}</h2>
         </ul>
