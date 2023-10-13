@@ -15,6 +15,7 @@ export default function Skills() {
     "Vilja att lära",
     "Prestigelös",
     "Ärlig",
+    "Lojal",
     "Verbal och skriven kommunikation",
     "Lagspelare",
     "Stresstålig",
@@ -33,25 +34,26 @@ export default function Skills() {
     "MySQL",
     "Laravel",
     "JQuery",
+    "Git-Bash",
+    "Scrum",
   ];
 
   return (
     <div className="transition ease-in-out duration-300 w-full h-full flex backdrop-filter backdrop-blur-lg">
       <div className="bg-gray-800 h-4/6 my-auto">
-        <div className="experience flex flex-wrap gap-4">
-          <h1 className="text-center text-3xl basis-full">Experience</h1>
-          <p className="w-1/2 m-auto">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-            quasi deleniti saepe incidunt cupiditate dolor adipisci, ex at optio
-            ipsam ad sed voluptates officia totam modi dolorem ratione amet
-            tempore nulla earum fugit eius cum aliquid molestias. Fugiat,
-            nesciunt excepturi voluptate sequi iure illum sunt, quae voluptatem
-            minus enim quasi consectetur dolores omnis necessitatibus laudantium
-            nobis harum. Mollitia veritatis itaque minima eveniet alias
-            expedita, voluptatibus rem perferendis provident eligendi
-            repellendus blanditiis nam, non dolore, quis ad modi assumenda
-            dignissimos officiis!
-          </p>
+        <div className="experience flex flex-wrap gap-4 justify-center">
+          <h1 className="text-center text-3xl basis-full pt-5">Erfarenheter</h1>
+          <ul className="basis-full text-center">
+            <li>{"Utvecklare (utöver 2st LIA-Perioder). Ca 1 år"}</li>
+            <li>
+              {
+                "Montör->Arbetsledare->Projektledare i Byggbranschen(Byggställning) Ca 15 år"
+              }
+            </li>
+            <li>
+              {"Kampsportsinstruktör i WingTsun, 12år & Weapons Combat ca 5år"}
+            </li>
+          </ul>
         </div>
         <div className="skills-container flex flex-wrap text-white">
           <div className="soft-skills w-1/2 flex ">
@@ -79,7 +81,7 @@ export default function Skills() {
                       height={50}
                       className="rounded-full mx-auto"
                     />
-                    <p>{hardSkill.to}</p>
+                    <p>{hardSkill}</p>
                   </li>
                 ))}
               </ul>
