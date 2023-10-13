@@ -1,9 +1,11 @@
 import React from "react";
-import Layout from "@/components/Layout";
+import Layout from "@/components/myHomePage/MyHomePageLayout";
 import Image from "next/image";
 import { I18nextProvider } from "react-i18next";
 import i18n from "../../i18n";
 import { useTranslation } from "react-i18next";
+import Link from "next/link";
+
 export default function projects() {
   return (
     <Layout>
@@ -16,7 +18,13 @@ export default function projects() {
 
         <div className="project-container w-300 flex-wrap text-center">
           <p>Status: Kommande</p>
-          <img src="https://via.placeholder.com/300x225" alt="placeholder" />
+          {/* <img src="https://via.placeholder.com/300x225" alt="placeholder" /> */}
+          <Image
+            src="https://via.placeholder.com/300x225"
+            alt="placeholder"
+            width={300}
+            height={225}
+          />
 
           <h2 className="text-center">Laszlos ställning AB</h2>
         </div>

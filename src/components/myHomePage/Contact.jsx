@@ -10,7 +10,7 @@ import {
   Textarea,
   useToast,
 } from "@chakra-ui/react";
-import { sendContactForm } from "../../lib/api";
+import { sendContactForm } from "../../../lib/myHomePage/api";
 
 const initValues = { name: "", email: "", message: "" };
 const initState = {

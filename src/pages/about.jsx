@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "@/components/Layout";
-import Skills from "@/components/Skills";
+import Layout from "@/components/myHomePage/MyHomePageLayout";
+import Skills from "@/components/myHomePage/Skills";
 import { I18nextProvider } from "react-i18next";
 import i18n from "../../i18n";
 import { useTranslation } from "react-i18next";

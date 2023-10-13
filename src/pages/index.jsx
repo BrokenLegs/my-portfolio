@@ -1,9 +1,9 @@
 "use client"; // This is a client component 👈🏽
 import "tailwindcss/tailwind.css";
 import React, { useState } from "react";
-import Layout from "@/components/Layout";
-import MySocialMedia from "@/components/MySocialMedia";
-import Contact from "@/components/Contact";
+import Layout from "@/components/myHomePage/MyHomePageLayout";
+import MySocialMedia from "@/components/myHomePage/MySocialMedia";
+import Contact from "@/components/myHomePage/Contact";
 import Image from "next/image";
 import { Link } from "react-scroll";
 
@@ -12,7 +12,7 @@ import i18n from "../../i18n";
 import { useTranslation } from "react-i18next";
 
 import { ChakraProvider } from "@chakra-ui/react";
-import Skills from "@/components/Skills";
+import Skills from "@/components/myHomePage/Skills";
 
 export default function Index() {
   const [isSkillsDisplaying, setIsSkillsDisplaying] = useState(false);
@@ -31,7 +31,7 @@ export default function Index() {
               className="w-11/12 mx-auto min-h-screen  whitespace-pre-wrap"
               style={{
                 background: "#1b1e23",
-                backgroundImage: "url('/me.png')",
+                backgroundImage: "url('/myHomePage/me.png')",
                 backgroundPosition: "center bottom",
                 backgroundSize: "50vh",
                 backgroundRepeat: "no-repeat",
@@ -56,7 +56,7 @@ export default function Index() {
                           className="cursor-pointer"
                         >
                           <Image
-                            src="/arrow.png"
+                            src="/myHomePage/arrow.png"
                             alt="Arrow"
                             width={100}
                             height={100}
@@ -95,7 +95,10 @@ export default function Index() {
                           {t("project")}
                         </h2>
                         <p className="text-gray-400 my-5">{t("projectText")}</p>
-                        <a className="underline text-gray-400" href="#">
+                        <a
+                          className="underline text-gray-400"
+                          href="/projects/onetrickpony/homepage"
+                        >
                           {t("projectLink")}
                         </a>
                       </div>
@@ -119,7 +122,7 @@ export default function Index() {
                       {t("contactMe")}
                       {"  "}
                       <Image
-                        src={"/r-arrow.svg"}
+                        src={"/myHomePage/r-arrow.svg"}
                         alt="Right arrow"
                         width={65}
                         height={65}
