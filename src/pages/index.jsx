@@ -72,7 +72,7 @@ export default function Index() {
                       <div>
                         <h2 className="text-3xl text-white">{t("about")}</h2>
                         <p className="text-gray-400 my-5">{t("aboutText")}</p>
-                        <a
+                        <Link
                           className="underline text-gray-400 "
                           href="#"
                           onClick={() =>
@@ -89,7 +89,7 @@ export default function Index() {
                           >
                             <Skills />
                           </div>
-                        </a>
+                        </Link>
                       </div>
                       <hr className="border-gray-400 w-full mt-10" />
                       <div>
@@ -97,8 +97,7 @@ export default function Index() {
                           {t("project")}
                         </h2>
                         <p className="text-gray-400 my-5">{t("projectText")}</p>
-                        {/* lasses länk som inte funkar med link component */}
-                        {/*  */}
+
                         <Link
                           className="underline text-gray-400"
                           href="/projects/onetrickpony/homepage"
