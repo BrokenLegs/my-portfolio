@@ -77,7 +77,7 @@ export default function Skills() {
                 {hardSkills.map((hardSkill) => (
                   <li key={hardSkill} className="text-center rounded-full p-2">
                     <Image
-                      src={`/${hardSkill.toLowerCase()}.svg`}
+                      src={`/myHomePage/${hardSkill.toLowerCase()}.svg`}
                       alt={hardSkill}
                       width={50}
                       height={50}

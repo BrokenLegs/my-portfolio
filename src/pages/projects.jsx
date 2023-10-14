@@ -18,7 +18,6 @@ export default function projects() {
 
         <div className="project-container w-300 flex-wrap text-center">
           <p>Status: Kommande</p>
-          {/* <img src="https://via.placeholder.com/300x225" alt="placeholder" /> */}
           <Image
             src="https://via.placeholder.com/300x225"
             alt="placeholder"

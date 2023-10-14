@@ -2,11 +2,11 @@
 import "tailwindcss/tailwind.css";
 import React, { useState } from "react";
 import Layout from "@/components/myHomePage/MyHomePageLayout";
+import Link from "next/link";
 import MySocialMedia from "@/components/myHomePage/MySocialMedia";
 import Contact from "@/components/myHomePage/Contact";
 import Image from "next/image";
-import { Link } from "react-scroll";
-
+import { Link as ScrollLink } from "react-scroll";
 import { I18nextProvider } from "react-i18next";
 import i18n from "../../i18n";
 import { useTranslation } from "react-i18next";
@@ -15,6 +15,8 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Skills from "@/components/myHomePage/Skills";
 
 export default function Index() {
+  const href = "/projects/onetrickpony/homepage";
+
   const [isSkillsDisplaying, setIsSkillsDisplaying] = useState(false);
   const { t } = useTranslation();
   return (
@@ -49,7 +51,7 @@ export default function Index() {
                         {t("myStatement")}
                       </p>
                       <div className="mt-20 flex rounded-full">
-                        <Link
+                        <ScrollLink
                           to="work-with-me"
                           smooth={true}
                           duration={500}
@@ -63,7 +65,7 @@ export default function Index() {
                             className="animate-bounce xs:hidden"
                             loading="lazy"
                           />
-                        </Link>
+                        </ScrollLink>
                       </div>
                     </div>
                     <div className="flex flex-wrap w-4/12 z-1 xs:w-full">
@@ -95,12 +97,15 @@ export default function Index() {
                           {t("project")}
                         </h2>
                         <p className="text-gray-400 my-5">{t("projectText")}</p>
-                        <a
+                        {/* lasses länk som inte funkar med link component */}
+                        {/*  */}
+                        <Link
                           className="underline text-gray-400"
                           href="/projects/onetrickpony/homepage"
+                          to="/projects/onetrickpony/homepage"
                         >
                           {t("projectLink")}
-                        </a>
+                        </Link>
                       </div>
                       <hr className="border-gray-400 w-full mt-10" />
                       <div className="mr-auto mb-5 xs:hidden">
