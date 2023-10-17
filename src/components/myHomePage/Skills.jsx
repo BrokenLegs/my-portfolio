@@ -43,8 +43,11 @@ export default function Skills() {
       <div className="bg-gray-800 h-4/6 my-auto drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
         <div className="experience flex flex-wrap gap-4 justify-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
           <h1 className="text-center text-3xl basis-full pt-5">Erfarenheter</h1>
-          <ul className="basis-full text-center">
-            <li>{"Utvecklare (utöver 2st LIA-Perioder). Ca 1 år"}</li>
+          <ul className="basis-full text-center leading-7">
+            <li className="">
+              {"Utvecklare (utöver 2st LIA-Perioder). Ca 1 år"}
+            </li>
+            <li className="">{"YH-Examen Agile Web Developer, 2.2 år"}</li>
             <li>
               {
                 "Montör->Arbetsledare->Projektledare i Byggbranschen(Byggställning) Ca 15 år"
