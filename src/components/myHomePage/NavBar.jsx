@@ -54,7 +54,8 @@ export default function NavBar() {
 
   // This function is used to determine the styling of the navBar
   function whichNavBarStyling() {
-    let navBarStyling = "sticky top-0 z-10 relative sm:display-none";
+    let navBarStyling =
+      "sticky top-0 z-10 relative sm:display-none xs:display-none";
     if (scrollOnTop && scrollDirection === "up") {
       navBarStyling +=
         "transition-all duration-1000 opacity-100 transparent text-white  ";

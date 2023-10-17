@@ -15,8 +15,6 @@ import { ChakraProvider } from "@chakra-ui/react";
 import Skills from "@/components/myHomePage/Skills";
 
 export default function Index() {
-  const href = "/projects/onetrickpony/homepage";
-
   const [isSkillsDisplaying, setIsSkillsDisplaying] = useState(false);
   const { t } = useTranslation();
   return (
@@ -30,7 +28,7 @@ export default function Index() {
             }}
           >
             <div
-              className="w-11/12 mx-auto min-h-screen  whitespace-pre-wrap"
+              className="xs:w-full w-11/12 mx-auto min-h-screen whitespace-pre-wrap"
               style={{
                 background: "#1b1e23",
                 backgroundImage: "url('/myHomePage/me.png')",
@@ -131,7 +129,7 @@ export default function Index() {
                         width={65}
                         height={65}
                         loading="lazy"
-                        className="inline-block"
+                        className="inline-block xs:hidden"
                       />
                     </h3>
                     <p className="text-gray-400 ">{t("contactText")}</p>
@@ -139,7 +137,7 @@ export default function Index() {
                       <MySocialMedia />
                     </div>
                   </div>
-                  <div className="contact-form-div w-5/12 ml-auto mr-20 xs:w-full xs:m-0 relative">
+                  <div className="contact-form-div w-5/12 xs:w-screen ml-auto mr-20  xs:m-0 relative">
                     <div className="rounded-lg bg-gray-800 p-20 relative z-0">
                       <Contact
                         inputStyle="placeholder-opacity-15 px-6 bg-transparent text-white text-2xl placeholder-white"
