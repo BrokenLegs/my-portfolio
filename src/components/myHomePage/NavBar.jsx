@@ -32,21 +32,12 @@ export default function NavBar() {
   });
 
   // This function is used to determine the scroll direction and position
-  function handleScroll() {
+  const handleScroll = () => {
     const currentScrollPosition = window.scrollY;
-    if (currentScrollPosition < 1) {
-      setScrollOnTop(true);
-    } else {
-      setScrollOnTop(false);
-    }
-
-    if (currentScrollPosition > scrollPosition) {
-      setScrollDirection("down");
-    } else {
-      setScrollDirection("up");
-    }
+    setScrollOnTop(currentScrollPosition < 1);
+    setScrollDirection(currentScrollPosition > scrollPosition ? "down" : "up");
     setScrollPosition(currentScrollPosition);
-  }
+  };
   const navBarStyling = whichNavBarStyling();
 
   const ulStyling =
@@ -54,8 +45,7 @@ export default function NavBar() {
 
   // This function is used to determine the styling of the navBar
   function whichNavBarStyling() {
-    let navBarStyling =
-      "sticky top-0 z-10 relative sm:display-none xs:display-none";
+    let navBarStyling = "sticky top-0 z-10 relative xs:hidden ";
     if (scrollOnTop && scrollDirection === "up") {
       navBarStyling +=
         "transition-all duration-1000 opacity-100 transparent text-white  ";
@@ -68,7 +58,6 @@ export default function NavBar() {
       navBarStyling +=
         "transition-all duration-1000 ease-in-out opacity-0 text-white z-[-10]";
     }
-
     return navBarStyling;
   }
 
@@ -99,9 +88,7 @@ export default function NavBar() {
           <li className="text-2xl">
             <Link href="projects">{t("navProjects")}</Link>
           </li>
-          {/* <li className="text-2xl">
-            <Link href="about">About</Link>
-          </li> */}
+
           <li className="align-top"> {selectLanguage()}</li>
           <h2 className="text-6xl ml-auto font-bold ">{t("myPortfolio")}</h2>
         </ul>
