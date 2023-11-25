@@ -44,7 +44,7 @@ export default function Skills() {
   return (
     <>
       <div className="flex justify-center items-center absolute top-0 left-0 right-0 bottom-0 z-50 backdrop-filter backdrop-blur-lg transition ease-in-out duration-300 text-center overflow-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 bg-gray-800 gap-10 py-20 absolute top-0 bottom-0 lg:relative">
+        <div className="grid grid-cols-1 md:grid-cols-2 bg-gray-800 gap-10 py-20 absolute top-0 bottom-0 overflow-auto lg:relative">
           <div className="erfarenheter col-span-full ">
             <h3 className="text-center text-3xl basis-full">Erfarenheter</h3>
             <ul className="leading-7">
