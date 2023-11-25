@@ -45,14 +45,14 @@ export default function NavBar() {
 
   // This function is used to determine the styling of the navBar
   function whichNavBarStyling() {
-    let navBarStyling = "sticky top-0 z-10 relative xs:hidden ";
+    let navBarStyling = "md:sticky top-0 z-10 xs:hidden ";
     if (scrollOnTop && scrollDirection === "up") {
       navBarStyling +=
         "transition-all duration-1000 opacity-100 transparent text-white  ";
     }
     if (scrollDirection === "up" && !scrollOnTop) {
       navBarStyling +=
-        "transition-all duration-1000 ease-in-out opacity-100 bg-white text-black";
+        "transition-all duration-1000 ease-in-out opacity-70 bg-white  text-black";
     }
     if (scrollDirection === "down") {
       navBarStyling +=

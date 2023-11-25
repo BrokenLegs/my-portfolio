@@ -22,78 +22,71 @@ export default function Skills() {
     "Öppensinnad",
   ];
   const hardSkills = [
-    "Html",
-    "Css",
-    "Tailwind",
-    "React",
-    "Next.js",
-    "Node",
-    "Git",
-    "PHP",
-    "Javascript",
-    "MySQL",
-    "Laravel",
-    "JQuery",
-    "Git-Bash",
-    "Scrum",
+    { name: "Html", image: "/myHomePage/html.svg" },
+    { name: "Css", image: "/myHomePage/css.svg" },
+    { name: "Tailwind", image: "/myHomePage/tailwind.svg" },
+    { name: "React", image: "/myHomePage/react.svg" },
+    { name: "Next.js", image: "/myHomePage/next.js.svg" },
+    { name: "Node", image: "/myHomePage/node.svg" },
+    { name: "Git", image: "/myHomePage/git.svg" },
+    { name: "PHP", image: "/myHomePage/php.svg" },
+    { name: "Javascript", image: "/myHomePage/javascript.svg" },
+    { name: "MySQL", image: "/myHomePage/mysql.svg" },
+    { name: "Laravel", image: "/myHomePage/laravel.svg" },
+    { name: "JQuery", image: "/myHomePage/jquery.svg" },
+    { name: "Git-Bash", image: "/myHomePage/git-bash.svg" },
+    { name: "Scrum", image: "/myHomePage/scrum.svg" },
+    { name: "C#", image: "/myHomePage/csharp.svg" },
+    { name: ".ASP.Net \n  Mvc", image: "/myHomePage/mvc.svg" },
+    { name: "Vue", image: "/myHomePage/vue.svg" },
   ];
 
   return (
-    <div className="transition ease-in-out duration-300 w-full h-full flex backdrop-filter backdrop-blur-lg">
-      <div className="bg-gray-800 h-4/6 my-auto drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-        <div className="experience flex flex-wrap gap-4 justify-center drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-          <h1 className="text-center text-3xl basis-full pt-5">Erfarenheter</h1>
-          <ul className="basis-full text-center leading-7">
-            <li className="">
-              {"Utvecklare (utöver 2st LIA-Perioder). Ca 1 år"}
-            </li>
-            <li className="">{"YH-Examen Agile Web Developer, 2.2 år"}</li>
-            <li>
-              {
-                "Montör->Arbetsledare->Projektledare i Byggbranschen(Byggställning) Ca 15 år"
-              }
-            </li>
-            <li>
-              {
-                "Kampsportsinstruktör i WingTsun, 12 år & Weapons Combat ca 5 år"
-              }
-            </li>
-          </ul>
-        </div>
-        <div className="skills-container flex flex-wrap drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-          <div className="soft-skills w-1/2 flex ">
-            <div className="w-1/2  mx-auto flex-wrap">
-              <h1 className="text-2xl text-center mt-10 ">Soft Skills</h1>
-              <ul className="flex flex-wrap gap-3 justify-center text-1xl py-10">
-                {softSkills.map((softSkill) => (
-                  <li key={softSkill} className="rounded-full p-2">
-                    <p>{softSkill}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
+    <>
+      <div className="flex justify-center items-center absolute top-0 left-0 right-0 bottom-0 z-50 backdrop-filter backdrop-blur-lg transition ease-in-out duration-300 text-center overflow-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 bg-gray-800 gap-10 py-20 absolute top-0 bottom-0 lg:relative">
+          <div className="erfarenheter col-span-full ">
+            <h3 className="text-center text-3xl basis-full">Erfarenheter</h3>
+            <ul className="leading-7">
+              <li className="">
+                {"Utvecklare (utöver 2st LIA-Perioder). Ca 1 år"}
+              </li>
+              <li className="">{"YH-Examen Agile Web Developer, 2.2 år"}</li>
+              <li>
+                {
+                  "Montör->Arbetsledare->Projektledare i Byggbranschen(Byggställning) Ca 15 år"
+                }
+              </li>
+              <li>
+                {
+                  "Kampsportsinstruktör i WingTsun, 12 år & Weapons Combat ca 5 år"
+                }
+              </li>
+            </ul>
           </div>
-          <div className="hard-skills w-1/2 flex ">
-            <div className="w-1/2  mx-auto flex-wrap">
-              <h1 className="text-2xl text-center mt-10">Hard Skills</h1>
-              <ul className="flex flex-wrap gap-3 justify-center text-1xl py-10">
-                {hardSkills.map((hardSkill) => (
-                  <li key={hardSkill} className="text-center rounded-full p-2">
-                    <Image
-                      src={`/myHomePage/${hardSkill.toLowerCase()}.svg`}
-                      alt={hardSkill}
-                      width={50}
-                      height={50}
-                      className="rounded-full mx-auto"
-                    />
-                    <p>{hardSkill}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className="soft-skills grid sm:grid-cols-3  xl:grid-cols-4  gap-3 ">
+            <h3 className="text-3xl col-span-full p-3">Soft skills</h3>
+            {softSkills.map((skill) => (
+              <p key={skill}> {skill}</p>
+            ))}
+          </div>
+          <div className="hard-skills grid grid-cols-4 lg:grid-cols-6 px-20 gap-2 ">
+            <h3 className="text-3xl col-span-full p-3">Hard skills</h3>
+            {hardSkills.map((skill) => (
+              <div key={skill.name}>
+                <Image
+                  src={skill.image}
+                  alt={skill.name}
+                  width={50}
+                  height={50}
+                  className="rounded-full mx-auto"
+                />
+                <p>{skill.name}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

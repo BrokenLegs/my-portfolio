@@ -81,13 +81,11 @@ export default function Contact({ inputStyle, hrLineColor }) {
 
   return (
     <>
-      {error &&
-        (console.log(error),
-        (
-          <Text color="red.300" my={4} fontSize="xl">
-            {error}
-          </Text>
-        ))}
+      {error && (
+        <Text color="red.300" my={4} fontSize="xl">
+          {error}
+        </Text>
+      )}
       {/* <form className="flex flex-col gap-10 "> */}
 
       <div className="flex flex-col gap-6">

@@ -22,13 +22,13 @@ export default function Index() {
       <ChakraProvider>
         <I18nextProvider i18n={i18n}>
           <div
-            className="min-h-screen min-w-screen relative z-0 "
+            className="absolute top-0 lg:px-20"
             style={{
               backgroundColor: "#2d3039",
             }}
           >
             <div
-              className="xs:w-full w-11/12 mx-auto min-h-screen whitespace-pre-wrap"
+              className="whitespace-pre-wrap"
               style={{
                 background: "#1b1e23",
                 backgroundImage: "url('/myHomePage/me.png')",
@@ -116,11 +116,11 @@ export default function Index() {
                 </div>
                 <hr className="border-gray-400 w-full" id="work-with-me" />
                 <div
-                  className="work-with-me text-white flex flex-wrap pt-40 ml-20 min-h-screen xs:pt-10 xs:m-0 xs:justify-center"
+                  className="work-with-me text-white grid lg:grid-cols-2 gap-3 min-h-screen p-20"
                   style={{ backgroundColor: "#1b1e23" }}
                 >
-                  <div className="get-in-touch flex-wrap whitespace-pre xs:text-center xs:justify-center xs:mb-5">
-                    <h3 className="text-6xl pb-3 mt-10 xs:mt-0">
+                  <div className="get-in-touch  ">
+                    <h3 className="text-6xl pb-3">
                       {t("contactMe")}
                       {"  "}
                       <Image
@@ -129,18 +129,18 @@ export default function Index() {
                         width={65}
                         height={65}
                         loading="lazy"
-                        className="inline-block xs:hidden"
+                        className="hidden lg:inline-block"
                       />
                     </h3>
                     <p className="text-gray-400 ">{t("contactText")}</p>
-                    <div className=" xs:m-0 xs:justify-center xs:flex">
+                    <div className="">
                       <MySocialMedia />
                     </div>
                   </div>
-                  <div className="contact-form-div w-5/12 xs:w-screen ml-auto mr-20  xs:m-0 relative">
+                  <div className="contact-form-div">
                     <div className="rounded-lg bg-gray-800 p-20 relative z-0">
                       <Contact
-                        inputStyle="placeholder-opacity-15 px-6 bg-transparent text-white text-2xl placeholder-white"
+                        inputStyle="placeholder-opacity-15 bg-transparent text-white text-2xl placeholder-white"
                         hrLineColor="border-gray-400"
                       />
                     </div>
